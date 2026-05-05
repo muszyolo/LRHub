@@ -41,6 +41,58 @@ body {
     filter: blur(5px);
 }
 
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-bottom: 1px solid var(--card-border);
+    padding: 1rem 0;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo-icon {
+    color: var(--primary-color);
+    width: 2rem;
+    height: 2rem;
+}
+
+.brand-lr {
+    color: var(--text-main);
+}
+
+.brand-hub {
+    color: var(--primary-color);
+}
+
+.header-socials {
+    margin-bottom: 0 !important;
+}
+
+.header-socials a {
+    width: 2.2rem !important;
+    height: 2.2rem !important;
+}
+
 .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -332,5 +384,18 @@ header h1 {
 
     .bg-image {
         opacity: 0.2; /* Lower opacity on mobile for better text readability */
+    }
+
+    .header-container {
+        padding: 0 1rem;
+    }
+
+    .branding {
+        font-size: 1.2rem;
+    }
+
+    .logo-icon {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 }
