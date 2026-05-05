@@ -199,6 +199,40 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Step Specific Colors */
+#step-01 { --step-color: #a855f7; } /* Purple */
+#step-02 { --step-color: #06b6d4; } /* Cyan */
+#step-03 { --step-color: #10b981; } /* Green */
+#step-04 { --step-color: #f59e0b; } /* Orange */
+#step-05 { --step-color: #f43f5e; } /* Rose */
+#step-06 { --step-color: #6366f1; } /* Indigo */
+#step-07 { --step-color: #fbbf24; } /* Amber */
+#step-08 { --step-color: #ef4444; } /* Red */
+
+.category-card {
+    --current-color: var(--step-color, var(--primary-color));
+}
+
+.category-card::before {
+    background: linear-gradient(to right, var(--current-color), transparent);
+}
+
+.category-number {
+    background: var(--current-color);
+}
+
+.tool-item:hover {
+    border-color: var(--current-color);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(var(--current-color), 0.2);
+}
+
+.category-title {
+    background: linear-gradient(to right, #fff, var(--current-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     header h1 { font-size: 2.5rem; }
