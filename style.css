@@ -111,6 +111,13 @@ body {
     font-size: 1.1rem;
 }
 
+.flag-svg {
+    width: 20px;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
 .header-placeholder {
     width: 2.2rem;
 }

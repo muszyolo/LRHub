@@ -43,12 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         localStorage.setItem('lrhub_lang', lang);
         
-        // Update button appearance if needed
+        // Update button appearance
         const btn = document.getElementById('lang-toggle-btn');
+        const ukFlag = '<svg class="flag-svg" width="20" height="10" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6" clip-path="url(#s)"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4" clip-path="url(#s)"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg>';
+        const myFlag = '<svg class="flag-svg" width="20" height="10" viewBox="0 0 28 14" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="14" fill="#fff"/><path d="M0,0h28v1h-28zM0,2h28v1h-28zM0,4h28v1h-28zM0,6h28v1h-28zM0,8h28v1h-28zM0,10h28v1h-28zM0,12h28v1h-28z" fill="#cc0000"/><rect width="14" height="8" fill="#000066"/><path d="M6,1.4a3.1,3.1 0 1 0 0,5.2 3.5,3.5 0 1 1 0,-5.2M8.5,4l1,0.5 0.5,1 0.5,-1 1,-0.5 -1,-0.5 -0.5,-1 -0.5,1z" fill="#ffff00"/></svg>';
+        
         if (lang === 'en') {
-            btn.innerHTML = '<span class="flag-icon">🇬🇧</span> EN | BM <span class="flag-icon">🇲🇾</span>';
+            btn.innerHTML = `${ukFlag} EN | BM ${myFlag}`;
         } else {
-            btn.innerHTML = '<span class="flag-icon">🇲🇾</span> BM | EN <span class="flag-icon">🇬🇧</span>';
+            btn.innerHTML = `${myFlag} BM | EN ${ukFlag}`;
         }
     }
 
