@@ -17,14 +17,18 @@
                 <i data-lucide="book-open" class="logo-icon"></i>
                 <span class="brand-lr">LR</span><span class="brand-hub">Hub</span>
             </a>
-            <div class="header-placeholder"></div>
+            <div class="header-controls">
+                <button id="lang-toggle-btn" class="lang-toggle">
+                    <span class="flag-icon">🇬🇧</span> EN | BM <span class="flag-icon">🇲🇾</span>
+                </button>
+            </div>
         </div>
     </header>
 
     <div class="container">
         <header>
-            <h1 id="main-title">Literature Review AI Hub</h1>
-            <p>Empower your research journey with integrated AI tools designed for every phase of the literature review process.</p>
+            <h1 id="main-title" data-tr="heroTitle">Literature Review AI Hub</h1>
+            <p data-tr="heroDesc">Empower your research journey with integrated AI tools designed for every phase of the literature review process.</p>
         </header>
 
         <main class="grid-container" id="tools-grid">
@@ -34,7 +38,7 @@
             <section class="category-card" id="step-01">
                 <div class="category-header">
                     <span class="category-number">01</span>
-                    <h2 class="category-title">Defining Research Question</h2>
+                    <h2 class="category-title" data-tr="step1Title">Defining Research Question</h2>
                 </div>
                 <div class="tools-list">
                     <a href="https://liner.ai" class="tool-item" target="_blank">
@@ -64,7 +68,7 @@
             <section class="category-card" id="step-02">
                 <div class="category-header">
                     <span class="category-number">02</span>
-                    <h2 class="category-title">Searching Literature</h2>
+                    <h2 class="category-title" data-tr="step2Title">Searching Literature</h2>
                 </div>
                 <div class="tools-list">
                     <a href="https://semanticscholar.org" class="tool-item" target="_blank">
@@ -94,7 +98,7 @@
             <section class="category-card" id="step-03">
                 <div class="category-header">
                     <span class="category-number">03</span>
-                    <h2 class="category-title">Screening Papers</h2>
+                    <h2 class="category-title" data-tr="step3Title">Screening Papers</h2>
                 </div>
                 <div class="tools-list">
                     <a href="https://asreview.nl" class="tool-item" target="_blank">
@@ -124,7 +128,7 @@
             <section class="category-card" id="step-04">
                 <div class="category-header">
                     <span class="category-number">04</span>
-                    <h2 class="category-title">Extracting Data</h2>
+                    <h2 class="category-title" data-tr="step4Title">Extracting Data</h2>
                 </div>
                 <div class="tools-list">
                     <a href="#" class="tool-item" target="_blank">
@@ -154,7 +158,7 @@
             <section class="category-card" id="step-05">
                 <div class="category-header">
                     <span class="category-number">05</span>
-                    <h2 class="category-title">Analyzing Trends</h2>
+                    <h2 class="category-title" data-tr="step5Title">Analyzing Trends</h2>
                 </div>
                 <div class="tools-list">
                     <a href="https://vosviewer.com" class="tool-item" target="_blank">
@@ -184,7 +188,7 @@
             <section class="category-card" id="step-06">
                 <div class="category-header">
                     <span class="category-number">06</span>
-                    <h2 class="category-title">Refining Review</h2>
+                    <h2 class="category-title" data-tr="step6Title">Refining Review</h2>
                 </div>
                 <div class="tools-list">
                     <a href="https://jenni.ai" class="tool-item" target="_blank">
@@ -214,7 +218,7 @@
             <section class="category-card" id="step-07">
                 <div class="category-header">
                     <span class="category-number">07</span>
-                    <h2 class="category-title">Managing Sources</h2>
+                    <h2 class="category-title" data-tr="step7Title">Managing Sources</h2>
                 </div>
                 <div class="tools-list">
                     <a href="https://zotero.org" class="tool-item" target="_blank">
@@ -244,7 +248,7 @@
             <section class="category-card" id="step-08">
                 <div class="category-header">
                     <span class="category-number">08</span>
-                    <h2 class="category-title">Plagiarism Check</h2>
+                    <h2 class="category-title" data-tr="step8Title">Plagiarism Check</h2>
                 </div>
                 <div class="tools-list">
                     <a href="https://turnitin.com" class="tool-item" target="_blank">
@@ -275,16 +279,16 @@
         <footer>
             <div class="social-links">
                 <a href="https://instagram.com/muszyolo" target="_blank" title="Instagram">
-                    <i data-lucide="instagram"></i>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                 </a>
                 <a href="https://www.linkedin.com/in/muhammad-muqsith-a5080a180/" target="_blank" title="LinkedIn">
-                    <i data-lucide="linkedin"></i>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                 </a>
                 <a href="https://github.com/muszyolo" target="_blank" title="GitHub">
-                    <i data-lucide="github"></i>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 </a>
             </div>
-            <p>&copy; 2026 MusAnalytics Hub - Literature Review AI Tools Repository</p>
+            <p data-tr="copyright">&copy; 2026 MusAnalytics Hub - Literature Review AI Tools Repository</p>
         </footer>
     </div>
 
