@@ -613,17 +613,17 @@ header h1 {
 /* Mobile Specific Optimizations */
 @media (max-width: 768px) {
     .main-header {
-        position: static !important; /* Force header to scroll away on iPhone/Safari */
+        position: static !important; /* Keep non-sticky for mobile scroll */
     }
 
     .header-container {
         flex-direction: column;
-        gap: 1.2rem;
+        gap: 1rem;
         padding: 1.5rem 1rem;
         align-items: center;
     }
 
-    /* Row 1: Toggles */
+    /* Row 1: Mode and Language */
     .header-controls {
         order: 1;
         width: 100%;
@@ -631,26 +631,41 @@ header h1 {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        gap: 0.8rem;
     }
 
-    /* Row 2: Navigation */
+    .theme-toggle, .lang-toggle {
+        height: 2.8rem; /* Compact height */
+        padding: 0 1rem;
+    }
+
+    /* Row 2: Home and Downloads Toggle */
     .main-nav {
         order: 2;
-        width: 100%;
+        width: auto; /* Fit content size like toggles */
+        min-width: 200px;
         justify-content: center;
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid var(--card-border);
+        padding: 0.2rem;
+        height: 2.8rem; /* Match height of toggles */
     }
-    
-    /* Row 3: Logo */
+
+    .nav-link {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    /* Row 3: Logo (LR Hub) */
     .branding {
         order: 3;
         margin-top: 0.5rem;
+        font-size: 1.3rem;
     }
-    
-    .theme-toggle, .lang-toggle {
-        height: 3rem; /* Uniform height */
+
+    .logo-icon {
+        width: 1.8rem;
+        height: 1.8rem;
     }
 
     header h1 {
