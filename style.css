@@ -269,10 +269,19 @@ body {
 }
 
 .download-items {
+    display: grid;
+    grid-template-columns: repeat(3, 180px); /* 3 columns */
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Mobile apps special layout: 2 on top, 1 centered below */
+.download-group:last-child .download-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center; /* Center items */
+    grid-template-columns: none;
+    max-width: 400px; /* Fits roughly 2 items + gap */
+    margin: 0 auto;
 }
 
 .dl-item {
@@ -284,7 +293,8 @@ body {
     color: var(--text-main);
     font-size: 0.9rem;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-    width: 180px; /* Fixed width for uniform size */
+    width: 180px; /* Uniform width */
+    height: 3.5rem; /* Uniform height for better grid alignment */
     display: flex;
     align-items: center;
     justify-content: center;
