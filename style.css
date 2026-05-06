@@ -612,6 +612,10 @@ header h1 {
 
 /* Mobile Specific Optimizations */
 @media (max-width: 768px) {
+    .main-header {
+        position: relative; /* Header scrolls away on mobile to save space */
+    }
+
     .header-container {
         flex-direction: column;
         gap: 1.2rem;
