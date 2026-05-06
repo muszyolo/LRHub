@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
             step7Title: "Managing Sources",
             step8Title: "Plagiarism Check",
             copyright: "&copy; 2026 MusAnalytics Hub - Literature Review AI Tools Repository",
-            navDownloads: "Downloads Hub",
+            navHome: "Home",
+            navDownloads: "Downloads",
             downloadsTitle: "Downloads Hub",
             downloadsDesc: "Direct access to desktop software, browser extensions, and mobile apps.",
             desktopApps: "Desktop Software",
@@ -35,7 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
             step7Title: "Mengurus Sumber",
             step8Title: "Semakan Plagiarisme",
             copyright: "&copy; 2026 MusAnalytics Hub - Repositori Alatan AI Sorotan Literatur",
-            navDownloads: "Hab Muat Turun",
+            navHome: "Utama",
+            navDownloads: "Muat Turun",
             downloadsTitle: "Hab Muat Turun",
             downloadsDesc: "Akses terus kepada perisian desktop, sambungan pelayar, dan aplikasi mudah alih.",
             desktopApps: "Perisian Desktop",
@@ -74,6 +76,37 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('lang-toggle-btn').addEventListener('click', () => {
         currentLang = currentLang === 'en' ? 'bm' : 'en';
         updateLanguage(currentLang);
+    });
+
+    // View Switching Logic (Tab Navigation)
+    const homeBtn = document.getElementById('nav-home');
+    const downloadsBtn = document.getElementById('nav-downloads');
+    const homeView = document.getElementById('home-view');
+    const downloadsView = document.getElementById('downloads-view');
+
+    function switchView(view) {
+        if (view === 'home') {
+            homeView.classList.remove('hidden');
+            downloadsView.classList.add('hidden');
+            homeBtn.classList.add('active');
+            downloadsBtn.classList.remove('active');
+        } else {
+            homeView.classList.add('hidden');
+            downloadsView.classList.remove('hidden');
+            homeBtn.classList.remove('active');
+            downloadsBtn.classList.add('active');
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    homeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        switchView('home');
+    });
+
+    downloadsBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        switchView('downloads');
     });
 
     // Add subtle hover micro-interactions

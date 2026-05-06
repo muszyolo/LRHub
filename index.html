@@ -18,7 +18,10 @@
                 <span class="brand-lr">LR</span><span class="brand-hub">Hub</span>
             </a>
             <div class="header-controls">
-                <a href="#downloads-hub" class="nav-link" data-tr="navDownloads">Downloads Hub</a>
+                <nav class="main-nav">
+                    <a href="#" id="nav-home" class="nav-link active" data-tr="navHome">Home</a>
+                    <a href="#" id="nav-downloads" class="nav-link" data-tr="navDownloads">Downloads</a>
+                </nav>
                 <button id="lang-toggle-btn" class="lang-toggle">
                     <svg class="flag-svg" width="20" height="10" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg"><clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6" clip-path="url(#s)"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="4" clip-path="url(#s)"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></svg>
                     EN | BM
@@ -34,7 +37,9 @@
             <p data-tr="heroDesc">Empower your research journey with integrated AI tools designed for every phase of the literature review process.</p>
         </header>
 
-        <main class="grid-container" id="tools-grid">
+            <!-- Main Grid Section -->
+            <div id="home-view" class="view-section">
+                <main class="grid-container" id="tools-grid">
             <!-- Cards will be dynamically injected by JS or kept static for SEO -->
             
             <!-- Step 01 -->
@@ -275,10 +280,13 @@
                         <i data-lucide="fingerprint" class="tool-icon"></i>
                     </a>
                 </div>
-            </section>
+            </div>
+            </main>
+            </div>
 
-            <!-- Downloads Hub Section -->
-            <section id="downloads-hub" class="downloads-section">
+            <!-- Downloads Hub Section (Hidden by default) -->
+            <div id="downloads-view" class="view-section hidden">
+                <section id="downloads-hub" class="downloads-section">
                 <div class="section-header">
                     <h2 data-tr="downloadsTitle">Downloads Hub</h2>
                     <p data-tr="downloadsDesc">Direct access to desktop software, browser extensions, and mobile apps.</p>
