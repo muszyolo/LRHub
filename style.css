@@ -616,32 +616,37 @@ header h1 {
         flex-direction: column;
         gap: 1.2rem;
         padding: 1.5rem 1rem;
-        align-items: center; /* Center everything */
+        align-items: center;
     }
 
+    /* Row 1: Toggles */
     .header-controls {
+        order: 1;
         width: 100%;
         display: flex;
-        flex-direction: row; /* Keep buttons on one row */
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        flex-wrap: wrap; /* Allow wrapping if too narrow */
     }
 
+    /* Row 2: Navigation */
     .main-nav {
-        order: 2; /* Put nav below branding/buttons */
+        order: 2;
         width: 100%;
         justify-content: center;
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--card-border);
     }
     
+    /* Row 3: Logo */
     .branding {
-        order: 1;
+        order: 3;
+        margin-top: 0.5rem;
     }
-
+    
     .theme-toggle, .lang-toggle {
-        order: 1;
+        height: 3rem; /* Uniform height */
     }
 
     header h1 {
