@@ -613,7 +613,7 @@ header h1 {
 /* Mobile Specific Optimizations */
 @media (max-width: 768px) {
     .main-header {
-        position: relative; /* Header scrolls away on mobile to save space */
+        position: static !important; /* Force header to scroll away on iPhone/Safari */
     }
 
     .header-container {
