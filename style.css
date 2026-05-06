@@ -16,11 +16,34 @@
 [data-theme="light"] {
     --bg-color: #f8fafc;
     --text-main: #0f172a;
-    --text-muted: #475569;
-    --card-bg: rgba(255, 255, 255, 0.95);
-    --card-border: rgba(0, 0, 0, 0.08);
-    --primary-color: #4f46e5;
+    --text-muted: #334155; /* Slightly darker slate */
+    --card-bg: #ffffff;
+    --card-border: rgba(0, 0, 0, 0.1);
+    --primary-color: #4338ca; /* Darker indigo */
     --glass-blur: 0px;
+}
+
+[data-theme="light"] .category-title,
+[data-theme="light"] .section-header h2,
+[data-theme="light"] header h1 {
+    text-shadow: none !important;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    color: var(--text-main) !important;
+}
+
+[data-theme="light"] header p {
+    color: var(--text-muted) !important;
+}
+
+[data-theme="light"] .category-card {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] .tool-item {
+    background: rgba(0, 0, 0, 0.02) !important;
+    border-color: rgba(0, 0, 0, 0.05) !important;
+    color: var(--text-main) !important;
 }
 
 * {
