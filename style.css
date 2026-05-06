@@ -1,49 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 :root {
-    /* Dark Mode (Default) */
+    /* Liquid Glass Dark Mode (Night) */
     --bg-color: #0f172a;
-    --text-main: #f8fafc;
-    --text-muted: #94a3b8;
-    --card-bg: rgba(255, 255, 255, 0.05);
-    --card-border: rgba(255, 255, 255, 0.1);
-    --glass-blur: 15px;
-    --primary-color: #6366f1;
+    --text-main: #000000; /* Black font */
+    --text-muted: #333333;
+    --card-bg: rgba(255, 255, 255, 0.65); /* High-transparency glass */
+    --card-border: rgba(255, 255, 255, 0.3);
+    --glass-blur: 25px;
+    --primary-color: #4338ca;
     --secondary-color: #a855f7;
     --accent-color: #ec4899;
 }
 
 [data-theme="light"] {
-    --bg-color: #f8fafc;
-    --text-main: #0f172a;
-    --text-muted: #334155; /* Slightly darker slate */
-    --card-bg: #ffffff;
+    /* Liquid Glass Light Mode (Day) */
+    --bg-color: #f1f5f9;
+    --text-main: #000000;
+    --text-muted: #333333;
+    --card-bg: rgba(255, 255, 255, 0.85);
     --card-border: rgba(0, 0, 0, 0.1);
-    --primary-color: #4338ca; /* Darker indigo */
-    --glass-blur: 0px;
-}
-
-[data-theme="light"] .category-title,
-[data-theme="light"] .section-header h2,
-[data-theme="light"] header h1 {
-    text-shadow: none !important;
-    background: none !important;
-    -webkit-text-fill-color: initial !important;
-    color: var(--text-main) !important;
-}
-
-[data-theme="light"] header p {
-    color: var(--text-muted) !important;
+    --primary-color: #4f46e5;
+    --glass-blur: 20px;
 }
 
 [data-theme="light"] .category-card {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 [data-theme="light"] .tool-item {
-    background: rgba(0, 0, 0, 0.02) !important;
-    border-color: rgba(0, 0, 0, 0.05) !important;
-    color: var(--text-main) !important;
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -251,10 +238,12 @@ body {
 }
 
 .download-group {
-    background: rgba(0, 0, 0, 0.4); /* Darker for "black box" feel */
+    background: var(--card-bg); /* Use liquid glass instead of solid black */
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
     padding: 1.5rem;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--card-border);
     text-align: center;
 }
 
@@ -563,9 +552,10 @@ footer {
 }
 
 .category-title {
-    background: linear-gradient(to right, #fff, var(--current-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-main);
+    /* Removed text-shadow and gradient for pure black font clarity */
 }
 
 /* Responsive adjustments */
