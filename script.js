@@ -78,11 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
         updateLanguage(currentLang);
     });
 
-    // Theme Switching Logic (3 Modes)
+    // Theme Switching Logic (2 Modes: Dark/Light)
     const themeBtn = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
-    const themes = ['dark', 'light', 'ambient'];
+    const themes = ['dark', 'light'];
     let currentThemeIndex = themes.indexOf(localStorage.getItem('lrhub_theme') || 'dark');
+    if (currentThemeIndex === -1) currentThemeIndex = 0;
 
     function updateTheme(index) {
         const theme = themes[index];
@@ -92,10 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update Icon
         if (theme === 'dark') {
             themeIcon.setAttribute('data-lucide', 'moon');
-        } else if (theme === 'light') {
-            themeIcon.setAttribute('data-lucide', 'sun');
         } else {
-            themeIcon.setAttribute('data-lucide', 'sparkles');
+            themeIcon.setAttribute('data-lucide', 'sun');
         }
         lucide.createIcons(); // Refresh icons
     }
@@ -104,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateTheme(currentThemeIndex);
 
     themeBtn.addEventListener('click', () => {
-        currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+        currentThemeIndex = currentThemeIndex === 0 ? 1 : 0;
         updateTheme(currentThemeIndex);
     });
 
