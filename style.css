@@ -3,12 +3,12 @@
 :root {
     /* Liquid Glass Dark Mode (Night) */
     --bg-color: #0f172a;
-    --text-main: #ffffff; /* Hero and global text */
+    --text-main: #ffffff; /* White font as requested */
     --text-muted: #94a3b8;
-    --card-text: #000000; /* Black font for glass cards */
-    --card-bg: rgba(255, 255, 255, 0.65); 
-    --card-border: rgba(255, 255, 255, 0.3);
-    --glass-blur: 25px;
+    --card-text: #ffffff; 
+    --card-bg: rgba(255, 255, 255, 0.08); /* Darker glass for white text */
+    --card-border: rgba(255, 255, 255, 0.15);
+    --glass-blur: 20px;
     --primary-color: #818cf8;
     --secondary-color: #a855f7;
     --accent-color: #ec4899;
@@ -250,7 +250,7 @@ body {
     border-radius: 20px;
     border: 1px solid var(--card-border);
     text-align: center;
-    color: var(--card-text) !important; /* Ensure black font inside cards */
+    color: var(--card-text);
 }
 
 .download-group h3 {
@@ -281,11 +281,11 @@ body {
 
 .dl-item {
     padding: 0.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--card-border);
     border-radius: 8px;
     text-decoration: none;
-    color: var(--card-text) !important; /* Black font */
+    color: var(--card-text);
     font-size: 0.75rem;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     width: 110px;
@@ -444,13 +444,13 @@ header p {
     align-items: center;
     justify-content: space-between;
     padding: 0.8rem 1.2rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--card-border);
     border-radius: 14px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     text-decoration: none;
-    color: var(--card-text) !important; /* Black font */
+    color: var(--card-text);
 }
 
 .tool-item:hover {
