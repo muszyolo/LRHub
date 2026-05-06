@@ -3,12 +3,13 @@
 :root {
     /* Liquid Glass Dark Mode (Night) */
     --bg-color: #0f172a;
-    --text-main: #000000; /* Black font */
-    --text-muted: #333333;
-    --card-bg: rgba(255, 255, 255, 0.65); /* High-transparency glass */
+    --text-main: #ffffff; /* Hero and global text */
+    --text-muted: #94a3b8;
+    --card-text: #000000; /* Black font for glass cards */
+    --card-bg: rgba(255, 255, 255, 0.65); 
     --card-border: rgba(255, 255, 255, 0.3);
     --glass-blur: 25px;
-    --primary-color: #4338ca;
+    --primary-color: #818cf8;
     --secondary-color: #a855f7;
     --accent-color: #ec4899;
 }
@@ -17,7 +18,8 @@
     /* Liquid Glass Light Mode (Day) */
     --bg-color: #f1f5f9;
     --text-main: #000000;
-    --text-muted: #333333;
+    --text-muted: #334155;
+    --card-text: #000000;
     --card-bg: rgba(255, 255, 255, 0.85);
     --card-border: rgba(0, 0, 0, 0.1);
     --primary-color: #4f46e5;
@@ -238,13 +240,14 @@ body {
 }
 
 .download-group {
-    background: var(--card-bg); /* Use liquid glass instead of solid black */
+    background: var(--card-bg); 
     backdrop-filter: blur(var(--glass-blur));
     -webkit-backdrop-filter: blur(var(--glass-blur));
     padding: 1.5rem;
     border-radius: 20px;
     border: 1px solid var(--card-border);
     text-align: center;
+    color: var(--card-text) !important; /* Ensure black font inside cards */
 }
 
 .download-group h3 {
@@ -275,20 +278,21 @@ body {
 
 .dl-item {
     padding: 0.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-decoration: none;
-    color: var(--text-main);
-    font-size: 0.75rem; /* Smaller font */
+    color: var(--card-text) !important; /* Black font */
+    font-size: 0.75rem;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-    width: 110px; /* Much smaller width */
+    width: 110px;
     height: 2.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     line-height: 1.1;
+    font-weight: 500;
 }
 
 .dl-item:hover {
@@ -437,13 +441,13 @@ header p {
     align-items: center;
     justify-content: space-between;
     padding: 0.8rem 1.2rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 14px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     text-decoration: none;
-    color: var(--text-main);
+    color: var(--card-text) !important; /* Black font */
 }
 
 .tool-item:hover {
