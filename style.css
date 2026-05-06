@@ -255,11 +255,13 @@ body {
     padding: 2rem;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center; /* Center headers */
 }
 
 .download-group h3 {
     display: flex;
     align-items: center;
+    justify-content: center; /* Center icon and text */
     gap: 0.8rem;
     margin-bottom: 1.5rem;
     font-size: 1.2rem;
@@ -269,11 +271,12 @@ body {
 .download-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.8rem;
+    gap: 1rem;
+    justify-content: center; /* Center items */
 }
 
 .dl-item {
-    padding: 0.6rem 1.2rem;
+    padding: 0.8rem 1rem;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
@@ -281,6 +284,11 @@ body {
     color: var(--text-main);
     font-size: 0.9rem;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    width: 180px; /* Fixed width for uniform size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .dl-item:hover {
