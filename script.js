@@ -15,7 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
             step6Title: "Refining Review",
             step7Title: "Managing Sources",
             step8Title: "Plagiarism Check",
-            copyright: "&copy; 2026 MusAnalytics Hub - Literature Review AI Tools Repository"
+            copyright: "&copy; 2026 MusAnalytics Hub - Literature Review AI Tools Repository",
+            navDownloads: "Downloads Hub",
+            downloadsTitle: "Downloads Hub",
+            downloadsDesc: "Direct access to desktop software, browser extensions, and mobile apps.",
+            desktopApps: "Desktop Software",
+            extensions: "Browser Extensions",
+            mobileApps: "Mobile Apps"
         },
         bm: {
             heroTitle: "Hab AI Sorotan Literatur",
@@ -28,7 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
             step6Title: "Menambah Baik Sorotan",
             step7Title: "Mengurus Sumber",
             step8Title: "Semakan Plagiarisme",
-            copyright: "&copy; 2026 MusAnalytics Hub - Repositori Alatan AI Sorotan Literatur"
+            copyright: "&copy; 2026 MusAnalytics Hub - Repositori Alatan AI Sorotan Literatur",
+            navDownloads: "Hab Muat Turun",
+            downloadsTitle: "Hab Muat Turun",
+            downloadsDesc: "Akses terus kepada perisian desktop, sambungan pelayar, dan aplikasi mudah alih.",
+            desktopApps: "Perisian Desktop",
+            extensions: "Sambungan Pelayar",
+            mobileApps: "Aplikasi Mudah Alih"
         }
     };
 
