@@ -78,6 +78,36 @@ document.addEventListener('DOMContentLoaded', () => {
         updateLanguage(currentLang);
     });
 
+    // Theme Switching Logic (3 Modes)
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const themes = ['dark', 'light', 'ambient'];
+    let currentThemeIndex = themes.indexOf(localStorage.getItem('lrhub_theme') || 'dark');
+
+    function updateTheme(index) {
+        const theme = themes[index];
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('lrhub_theme', theme);
+        
+        // Update Icon
+        if (theme === 'dark') {
+            themeIcon.setAttribute('data-lucide', 'moon');
+        } else if (theme === 'light') {
+            themeIcon.setAttribute('data-lucide', 'sun');
+        } else {
+            themeIcon.setAttribute('data-lucide', 'sparkles');
+        }
+        lucide.createIcons(); // Refresh icons
+    }
+
+    // Initialize Theme
+    updateTheme(currentThemeIndex);
+
+    themeBtn.addEventListener('click', () => {
+        currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+        updateTheme(currentThemeIndex);
+    });
+
     // View Switching Logic (Tab Navigation)
     const homeBtn = document.getElementById('nav-home');
     const downloadsBtn = document.getElementById('nav-downloads');
