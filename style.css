@@ -270,8 +270,8 @@ body {
 
 .download-items {
     display: grid;
-    grid-template-columns: repeat(3, 180px); /* 3 columns */
-    gap: 1rem;
+    grid-template-columns: repeat(3, 140px); /* Smaller columns */
+    gap: 0.8rem;
     justify-content: center;
 }
 
@@ -280,25 +280,26 @@ body {
     display: flex;
     flex-wrap: wrap;
     grid-template-columns: none;
-    max-width: 400px; /* Fits roughly 2 items + gap */
+    max-width: 320px; /* Scaled down for 2 items */
     margin: 0 auto;
 }
 
 .dl-item {
-    padding: 0.8rem 1rem;
+    padding: 0.6rem 0.8rem;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    border-radius: 10px;
     text-decoration: none;
     color: var(--text-main);
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* Smaller font */
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-    width: 180px; /* Uniform width */
-    height: 3.5rem; /* Uniform height for better grid alignment */
+    width: 140px; /* Smaller width */
+    height: 3rem; /* Smaller height */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    line-height: 1.2;
 }
 
 .dl-item:hover {
