@@ -375,29 +375,47 @@ header p {
 .category-card {
     background: linear-gradient(
         135deg,
-        rgba(255, 255, 255, 0.12) 0%,
-        rgba(255, 255, 255, 0.04) 100%
+        rgba(255, 255, 255, 0.15) 0%,
+        rgba(255, 255, 255, 0.05) 100%
     );
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
     
-    /* Layer 1: Lighting (Top-lit border) */
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    /* Layer 1: High-Intensity Lighting (Neon Glass Edge) */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
     
-    border-radius: 24px;
-    padding: 2rem;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 28px;
+    padding: 2.5rem 2rem;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
     animation: fadeInUp 0.8s ease-out both;
     
-    /* Layer 2: Depth (Layered Shadows) */
+    /* Layer 2: Deep 3D Depth (Cinematic Shadows) */
     box-shadow: 
-        inset 0 0 20px rgba(255, 255, 255, 0.05), /* Inner glow */
-        0 10px 30px rgba(0, 0, 0, 0.3),            /* Main shadow */
-        0 4px 6px rgba(0, 0, 0, 0.1);              /* Ambient occlusion */
+        inset 0 0 30px rgba(255, 255, 255, 0.08),
+        0 20px 50px rgba(0, 0, 0, 0.5),
+        0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Layer 3: Glass Reflection Sheen */
+.category-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: 0.8s;
+    pointer-events: none;
 }
 
 .category-card::before {
@@ -419,15 +437,16 @@ header p {
 }
 
 .category-card:hover {
-    transform: translateY(-12px) scale(1.02);
-    border-color: rgba(255, 255, 255, 0.3);
-    border-top-color: rgba(255, 255, 255, 0.6);
-    
-    /* Layer 3: Dynamic Interaction Shadow */
+    transform: translateY(-15px) scale(1.03);
+    border-top-color: rgba(255, 255, 255, 0.8);
     box-shadow: 
-        inset 0 0 30px rgba(255, 255, 255, 0.1),
-        0 30px 60px rgba(0, 0, 0, 0.6),
-        0 0 20px rgba(var(--current-color), 0.2);
+        inset 0 0 40px rgba(255, 255, 255, 0.15),
+        0 40px 80px rgba(0, 0, 0, 0.7),
+        0 0 25px rgba(var(--current-color), 0.3);
+}
+
+.category-card:hover::after {
+    left: 100%;
 }
 
 .category-card:hover::before {
