@@ -134,8 +134,9 @@ body {
 }
 
 .theme-toggle {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--card-border);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
     color: var(--text-main);
     width: 2.8rem;
     height: 2.8rem;
@@ -145,17 +146,23 @@ body {
     align-items: center;
     justify-content: center;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    border-top-color: rgba(255, 255, 255, 0.6);
     transform: rotate(15deg) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .lang-toggle {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--card-border);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
     color: var(--text-main);
     padding: 0.6rem 1.2rem;
     border-radius: 12px;
@@ -167,13 +174,18 @@ body {
     gap: 0.8rem;
     transition: all 0.3s;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
 }
 
 .lang-toggle:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    border-top-color: rgba(255, 255, 255, 0.6);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .flag-icon {
@@ -204,18 +216,26 @@ body {
     border-radius: 10px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0.8;
+    border: 1px solid transparent;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .nav-link:hover {
     color: white;
     background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     opacity: 1;
+    transform: translateY(-1px);
 }
 
 .nav-link.active {
     color: white;
     background: var(--primary-color);
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
     opacity: 1;
 }
 
